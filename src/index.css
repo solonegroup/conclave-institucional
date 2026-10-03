@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", "Noto Serif SC", serif;
+  --font-sans: "Montserrat", "Noto Sans SC", sans-serif;
+  --color-gold: #C5A059;
+  --color-graphite: #1A1A1A;
+  --color-emerald: #004D40;
+  --color-emerald-light: #2E8B74;
+  --color-ivory: #F5F5F0;
+  --color-black: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-black);
+  color: var(--color-ivory);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}

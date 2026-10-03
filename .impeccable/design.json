@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-27T00:00:00.000Z",
+  "title": "Design System: Conclave",
+  "extensions": {
+    "colorMeta": {
+      "gold": { "role": "primary", "displayName": "Dourado Fosco", "canonical": "#C5A059", "tonalRamp": ["#241d10", "#3d3119", "#5c4b26", "#836a35", "#a5893f", "#C5A059", "#d8bd8a", "#ecdfc4"] },
+      "graphite": { "role": "neutral", "displayName": "Grafite", "canonical": "#1A1A1A", "tonalRamp": ["#000000", "#0d0d0d", "#1A1A1A", "#2b2b2b", "#404040", "#5c5c5c", "#8a8a8a", "#bdbdbd"] },
+      "emerald": { "role": "secondary", "displayName": "Verde-Esmeralda Profundo", "canonical": "#004D40", "tonalRamp": ["#001410", "#00281f", "#003b30", "#004D40", "#00654f", "#128064", "#3f9c80", "#7cbba5"] },
+      "emerald-light": { "role": "secondary", "displayName": "Verde-Esmeralda Claro", "canonical": "#2E8B74", "tonalRamp": ["#0e2a22", "#194537", "#215d4a", "#2E8B74", "#3ba98d", "#5cc0a6", "#88d3bf", "#bde8db"] },
+      "ivory": { "role": "neutral", "displayName": "Marfim", "canonical": "#F5F5F0", "tonalRamp": ["#3a3a37", "#59594f", "#7a7a70", "#9c9c8f", "#bdbdb0", "#dcdcd3", "#F5F5F0", "#fbfbf9"] },
+      "black": { "role": "neutral", "displayName": "Preto Absoluto", "canonical": "#000000", "tonalRamp": ["#000000", "#0a0a0a", "#141414", "#1f1f1f", "#2b2b2b", "#3d3d3d", "#5a5a5a", "#858585"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Headline do Hero, única aparição por página." },
+      "title": { "displayName": "Title", "purpose": "Títulos de seção e de unidade de negócio." },
+      "body": { "displayName": "Body", "purpose": "Parágrafos descritivos, sempre com opacidade reduzida." },
+      "label": { "displayName": "Label", "purpose": "Navegação, eyebrows, CTAs, legendas — uppercase, tracking largo." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-editorial", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Easing padrão para fade/translate de entrada de seção." },
+      { "name": "duration-slow", "value": "1200ms-1500ms", "purpose": "Duração de entrada de blocos de texto principais." },
+      { "name": "duration-hover", "value": "300ms-500ms", "purpose": "Transições de hover em links, bordas e CTA." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal — borda dourada fina, inverte para preenchimento sólido no hover.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Agendar Conversa Confidencial</a>",
+      "css": ".ds-btn-primary { display: inline-block; border: 1px solid rgba(197,160,89,0.4); color: #C5A059; font-family: Montserrat, sans-serif; font-size: 0.625rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 20px 40px; text-decoration: none; transition: background 0.5s, color 0.5s; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { background: #C5A059; color: #000000; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Link de navegação do header — label style, transição lenta para dourado no hover.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">A Conclave</a>",
+      "css": ".ds-nav-link { color: rgba(245,245,240,0.7); font-family: Montserrat, sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: color 0.5s; } .ds-nav-link:hover, .ds-nav-link:focus-visible { color: #C5A059; }"
+    },
+    {
+      "name": "Unit Card",
+      "kind": "card",
+      "refersTo": "unit-card",
+      "description": "Card full-bleed de unidade de negócio — imagem escurecida com gradiente e texto ancorado à esquerda.",
+      "html": "<div class=\"ds-unit-card\" style=\"background-image:url(https://example.com/image.jpg)\"><div class=\"ds-unit-card-overlay\"></div><div class=\"ds-unit-card-content\"><h3 class=\"ds-unit-card-title\">Real Estate</h3><p class=\"ds-unit-card-desc\">Estruturação de ativos imobiliários singulares.</p></div></div>",
+      "css": ".ds-unit-card { position: relative; min-height: 400px; height: 60vh; display: flex; align-items: center; overflow: hidden; background-size: cover; background-position: center; filter: grayscale(80%) brightness(0.25) contrast(1.2); } .ds-unit-card-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.6), transparent); } .ds-unit-card-content { position: relative; z-index: 2; max-width: 36rem; padding: 0 1.5rem; } .ds-unit-card-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: #C5A059; margin-bottom: 1rem; } .ds-unit-card-desc { font-family: Montserrat, sans-serif; font-size: 0.9rem; font-weight: 300; color: rgba(245,245,240,0.8); line-height: 1.7; }"
+    },
+    {
+      "name": "Principle Item",
+      "kind": "custom",
+      "refersTo": "principle-item",
+      "description": "Item de grid de princípios — borda superior fina que muda de cor no hover.",
+      "html": "<div class=\"ds-principle\"><h4 class=\"ds-principle-title\">Discrição Absoluta</h4><p class=\"ds-principle-desc\">Operamos nos bastidores. O valor está no resultado, não na exposição.</p></div>",
+      "css": ".ds-principle { display: flex; flex-direction: column; border-top: 1px solid rgba(245,245,240,0.1); padding-top: 2rem; transition: border-color 0.5s; } .ds-principle:hover { border-color: #2E8B74; } .ds-principle-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #C5A059; margin-bottom: 1rem; } .ds-principle-desc { font-family: Montserrat, sans-serif; font-size: 0.875rem; font-weight: 300; color: rgba(245,245,240,0.6); line-height: 1.7; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Sala do Conselho",
+    "overview": "Conclave é uma mesa de decisão, não uma vitrine. O sistema visual reproduz a atmosfera de uma sala de conselho discreta: quase escuridão total, dourado tratado como coisa rara e valiosa, silêncio visual entre uma mensagem e outra. Nada compete por atenção — cada elemento aparece devagar, ocupa seu momento, e cede espaço.\n\nA base é preto absoluto e grafite, quase sem variação de superfície. O dourado (#C5A059) é o único acento que carrega peso institucional — usado em títulos, links ativos e o símbolo do leão em marca d'água — nunca como preenchimento decorativo. O verde-esmeralda aparece só como traço fino: uma borda, um sublinhado no hover. É o sistema mais próximo do silêncio que ainda comunica hierarquia.",
+    "keyCharacteristics": [
+      "Fundo preto/grafite quase sem variação — a 'sala escura' é constante em toda a página",
+      "Dourado como singular ponto de foco por seção, nunca em massa",
+      "Tipografia serifada (Playfair Display) para toda mensagem que carrega peso institucional; sans (Montserrat) para tudo funcional/legenda",
+      "Composição extremamente respirada — uma mensagem central por seção, muito espaço negativo",
+      "Movimento lento e sutil (fade + translate curto, 1–1.5s, easing suave) — nunca abrupto"
+    ],
+    "rules": [
+      { "name": "The Rare Gold Rule", "body": "Dourado nunca é cor de fundo nem preenche formas grandes. É reservado a texto de peso institucional, bordas finas e o símbolo — sua raridade visual é o que sinaliza valor.", "section": "colors" },
+      { "name": "The Opacity Hierarchy Rule", "body": "Hierarquia de texto secundário não troca de cor — troca de opacidade sobre marfim (text-ivory/80 → corpo principal, /60 → corpo secundário, /40 → legendas, /30 → rodapé/legal, /10 → divisores).", "section": "colors" },
+      { "name": "The Wide Label Rule", "body": "Todo texto funcional/de apoio (nav, eyebrow, botão, legal) é uppercase com tracking-[0.2em] em tamanho pequeno (10–12px). Nunca corpo de texto normal nesse tratamento — reservado a rótulos.", "section": "typography" }
+    ],
+    "dos": [
+      "Do usar dourado só em texto, borda fina ou marca d'água — nunca como preenchimento de área grande (The Rare Gold Rule).",
+      "Do manter uma mensagem central por seção com bastante espaço negativo ao redor.",
+      "Do aplicar hierarquia de texto secundário via opacidade sobre marfim, não trocando de cor (The Opacity Hierarchy Rule).",
+      "Do manter todo rótulo funcional (nav, CTA, legenda, eyebrow) em uppercase com tracking largo (The Wide Label Rule).",
+      "Do usar transições lentas e discretas (duration-500 a 1500ms, easing suave) em qualquer novo elemento animado.",
+      "Do manter cantos retos (sem border-radius) em qualquer novo componente."
+    ],
+    "donts": [
+      "Don't introduzir cor saturada fora da paleta dourado/esmeralda/marfim/preto/grafite.",
+      "Don't usar peso bold na serifa (Playfair) — o peso visual vem do tamanho e da cor, não da gordura da fonte.",
+      "Don't adicionar carrossel automático, excesso de botões ou qualquer elemento que compita com a mensagem central da seção.",
+      "Don't escrever copy com números sem lastro, promessas de retorno, ou linguagem da lista de termos evitados no manifesto (garantido, revolucionário, disruptivo, etc.).",
+      "Don't sugerir oferta pública de investimento, captação regulada ou atuação como instituição financeira em qualquer copy sobre Capital & Ventures."
+    ]
+  }
+}

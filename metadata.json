@@ -1,0 +1,6 @@
+{
+  "name": "Conclave - Estruturadora de Negócios",
+  "description": "Landing page de ultra-luxo e discrição para a Conclave.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
