@@ -147,15 +147,15 @@ export function Hero() {
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-emerald/20 via-transparent to-transparent" />
 
       {/* Navigation */}
-      <nav className="absolute top-0 w-full z-20 px-6 md:px-8 pt-16 md:pt-10 pb-10 flex justify-between items-center text-xs tracking-[0.2em] uppercase text-ivory/70">
+      <nav className="absolute top-0 w-full z-20 px-6 md:px-8 pt-16 md:py-10 pb-10 flex justify-between items-center text-xs tracking-[0.2em] uppercase text-ivory/70">
         <div className="hidden md:flex gap-12">
           <a href="#essence" className="hover:text-gold transition-colors duration-500">{t.nav.about}</a>
           <a href="#process" className="hover:text-gold transition-colors duration-500">{t.nav.process}</a>
         </div>
         
-        <div className="flex-1 flex flex-col items-center gap-3 md:gap-4">
-           <img src="/logo.png" alt="Conclave" className="h-20 md:h-28 w-auto object-contain" />
-           <span className="font-serif text-gold text-sm md:text-xl tracking-[0.4em] md:tracking-[0.45em] uppercase whitespace-nowrap">Conclave Business</span>
+        <div className="flex-1 flex flex-col items-center gap-3 md:gap-2">
+           <img src="/logo.png" alt="Conclave" className="h-20 md:h-10 w-auto md:opacity-90 object-contain" />
+           <span className="font-serif text-gold text-sm md:text-xs tracking-[0.4em] md:tracking-[0.35em] uppercase whitespace-nowrap">Conclave Business</span>
         </div>
 
         <div className="hidden md:flex gap-12">
