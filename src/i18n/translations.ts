@@ -1,9 +1,9 @@
 export const LANGUAGES = [
-  { code: 'pt', label: 'PT', name: 'Português', htmlLang: 'pt-BR' },
-  { code: 'en', label: 'EN', name: 'English', htmlLang: 'en' },
-  { code: 'zh', label: '中文', name: '中文', htmlLang: 'zh-CN' },
-  { code: 'es', label: 'ES', name: 'Español', htmlLang: 'es' },
-  { code: 'fr', label: 'FR', name: 'Français', htmlLang: 'fr' },
+  { code: 'pt', label: 'PT', name: 'Português', short: 'PT-BR', htmlLang: 'pt-BR' },
+  { code: 'en', label: 'EN', name: 'English', short: 'EN', htmlLang: 'en' },
+  { code: 'zh', label: '中文', name: '中文', short: 'ZH', htmlLang: 'zh-CN' },
+  { code: 'es', label: 'ES', name: 'Español', short: 'ES', htmlLang: 'es' },
+  { code: 'fr', label: 'FR', name: 'Français', short: 'FR', htmlLang: 'fr' },
 ] as const;
 
 export type Lang = (typeof LANGUAGES)[number]['code'];
